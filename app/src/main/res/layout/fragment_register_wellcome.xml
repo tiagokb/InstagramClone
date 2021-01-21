@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".register.presentation.RegisterActivity"
+    tools:showIn="@layout/activity_register">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/register_wellcome_text_view_wellcome"
+        style="@style/InstaTextViewBaseForm"
+        android:layout_gravity="center"
+        android:text="@string/welcome_to_instagram" />
+
+    <com.tiagokontarski.instagramclone.commons.LoadingButton
+        android:id="@+id/register_wellcome_buttom_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/register_wellcome_text_view_wellcome"
+        app:text="@string/next" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/InstaFormButton.Link"
+        android:layout_gravity="center"
+        android:text="@string/change_username" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/register_wellcome_text_view_terms"
+        style="@style/InstaTextViewBase"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/agree_terms_policy" />
+
+</LinearLayout>
