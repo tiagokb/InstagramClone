@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.presentation.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/main_profile_image_view_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_insta_profile_thin"
+            app:civ_border_color="@color/grayBorder"
+            app:civ_border_overlay="true"
+            app:civ_border_width="1dp"
+            app:civ_circle_background_color="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_insta_add_profile"
+            app:civ_border_color="@color/white"
+            app:civ_border_overlay="true"
+            app:civ_border_width="1dp"
+            app:civ_circle_background_color="@color/blueEnable"
+            app:layout_constraintBottom_toBottomOf="@id/main_profile_image_view_picture"
+            app:layout_constraintEnd_toEndOf="@id/main_profile_image_view_picture" />
+
+        <TextView
+            android:id="@+id/main_profile_text_view_publish_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/main_profile_text_view_publish"
+            app:layout_constraintEnd_toStartOf="@id/main_profile_text_view_followers_count"
+            app:layout_constraintStart_toEndOf="@id/main_profile_image_view_picture"
+            app:layout_constraintTop_toTopOf="@id/main_profile_image_view_picture" />
+
+        <TextView
+            android:id="@+id/main_profile_text_view_followers_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="0"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/main_profile_text_view_publish_count"
+            app:layout_constraintEnd_toStartOf="@id/main_profile_text_view_following_count"
+            app:layout_constraintStart_toEndOf="@id/main_profile_text_view_publish_count"
+            app:layout_constraintTop_toTopOf="@id/main_profile_image_view_picture" />
+
+        <TextView
+            android:id="@+id/main_profile_text_view_following_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="0"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/main_profile_text_view_publish_count"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/main_profile_text_view_followers_count"
+            app:layout_constraintTop_toTopOf="@id/main_profile_image_view_picture" />
+
+        <TextView
+            android:id="@+id/main_profile_text_view_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="@string/posts"
+            app:layout_constraintBottom_toTopOf="@id/main_profile_button_edit_profile"
+            app:layout_constraintEnd_toEndOf="@id/main_profile_text_view_publish_count"
+            app:layout_constraintStart_toStartOf="@id/main_profile_text_view_publish_count"
+            app:layout_constraintTop_toBottomOf="@id/main_profile_text_view_publish_count" />
+
+        <TextView
+            android:id="@+id/main_profile_text_view_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/followers"
+            app:layout_constraintBottom_toBottomOf="@id/main_profile_text_view_publish"
+            app:layout_constraintEnd_toEndOf="@id/main_profile_text_view_followers_count"
+            app:layout_constraintStart_toStartOf="@id/main_profile_text_view_followers_count"
+            app:layout_constraintTop_toTopOf="@id/main_profile_text_view_publish" />
+
+        <TextView
+            android:id="@+id/main_profile_text_view_following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/following"
+            app:layout_constraintBottom_toBottomOf="@id/main_profile_text_view_publish"
+            app:layout_constraintEnd_toEndOf="@id/main_profile_text_view_following_count"
+            app:layout_constraintStart_toStartOf="@id/main_profile_text_view_following_count"
+            app:layout_constraintTop_toTopOf="@id/main_profile_text_view_publish" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/main_profile_button_edit_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:padding="4dp"
+            android:text="@string/edit_profile"
+            app:layout_constraintBottom_toBottomOf="@id/main_profile_image_view_picture"
+            app:layout_constraintEnd_toEndOf="@id/main_profile_text_view_following"
+            app:layout_constraintStart_toStartOf="@id/main_profile_text_view_publish"
+            app:layout_constraintTop_toBottomOf="@id/main_profile_text_view_followers" />
+
+        <TextView
+            android:id="@+id/main_profile_text_view_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/username"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_profile_image_view_picture" />
+
+        <TextView
+            android:id="@+id/main_profile_text_view_bio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:maxLines="3"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_profile_text_view_username" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/main_profile_nav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/profile_divider"
+            app:itemIconTint="@color/black"
+            app:labelVisibilityMode="unlabeled"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_profile_text_view_bio"
+            app:menu="@menu/menu_profile_divider" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_profile_rv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_profile_nav"
+            tools:listitem="@layout/item_rv_main_profile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

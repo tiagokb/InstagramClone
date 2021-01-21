@@ -7,6 +7,7 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/dialog_title"
         style="@style/InstaTextViewBaseDialog"
         android:textStyle="bold"
         tools:text="@string/define_photo_profile"

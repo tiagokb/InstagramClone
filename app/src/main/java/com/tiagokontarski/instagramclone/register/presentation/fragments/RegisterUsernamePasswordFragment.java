@@ -1,4 +1,4 @@
-package com.tiagokontarski.instagramclone.register.presentation;
+package com.tiagokontarski.instagramclone.register.presentation.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

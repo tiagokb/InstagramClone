@@ -20,7 +20,7 @@
 
             <fragment
                 android:id="@+id/register_fragment"
-                android:name="com.tiagokontarski.instagramclone.register.presentation.RegisterPhotoFragment"
+                android:name="com.tiagokontarski.instagramclone.register.presentation.fragments.RegisterPhotoFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:layout="@layout/fragment_register_photo" />
