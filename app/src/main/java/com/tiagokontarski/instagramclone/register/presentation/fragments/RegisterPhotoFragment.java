@@ -11,19 +11,28 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.tiagokontarski.instagramclone.R;
-import com.tiagokontarski.instagramclone.commons.CustomDialog;
+import com.tiagokontarski.instagramclone.commons.views.AbstractFragment;
+import com.tiagokontarski.instagramclone.commons.views.CustomDialog;
+import com.tiagokontarski.instagramclone.register.presentation.RegisterView;
+import com.tiagokontarski.instagramclone.register.presentation.fragments.presentation.RegisterPresenter;
 
-public class RegisterPhotoFragment extends Fragment {
-    public RegisterPhotoFragment() {
+public class RegisterPhotoFragment extends AbstractFragment<RegisterPresenter> implements RegisterView.PhotoView {
+    private RegisterPhotoFragment() {
     }
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_register_photo, container, false);
-        //TODO change ScrollView layout_gravity to Top
+    public static RegisterPhotoFragment newInstance(RegisterPresenter presenter) {
+        RegisterPhotoFragment fragment = new RegisterPhotoFragment();
 
-        return view;
+        fragment.setPresenter(presenter);
+        presenter.setPhotoView(fragment);
+
+
+        return fragment;
+    }
+
+    @Override
+    public int getLayout() {
+        return R.layout.fragment_register_photo;
     }
 
     @Override
@@ -38,5 +47,9 @@ public class RegisterPhotoFragment extends Fragment {
                 .build();
 
         dialog.show();
+    }
+
+    @Override
+    public void onFailureForm(String nameError, String passwordError, String matchingPasswordError) {
     }
 }

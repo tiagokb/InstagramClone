@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <color name="colorPrimary">@color/gray</color>
+    <color name="colorPrimaryDark">@color/grayDark</color>
+    <color name="colorAccent">@color/black</color>
+
     <color name="grayBorder">#DBDBDB</color>
     <color name="gray">#FAFAFA</color>
     <color name="grayDark">#EFEFEF</color>

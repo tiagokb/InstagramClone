@@ -1,4 +1,4 @@
-package com.tiagokontarski.instagramclone.commons;
+package com.tiagokontarski.instagramclone.commons.views;
 
 import android.app.Dialog;
 import android.content.Context;

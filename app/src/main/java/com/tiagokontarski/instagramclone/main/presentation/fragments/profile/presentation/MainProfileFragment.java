@@ -1,7 +1,9 @@
-package com.tiagokontarski.instagramclone.main.presentation.fragments;
+package com.tiagokontarski.instagramclone.main.presentation.fragments.profile.presentation;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridLayout;
@@ -22,16 +24,30 @@ public class MainProfileFragment extends Fragment {
 
     private RecyclerView rv;
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main_profile, container, false);
-
+        //TODO app:layout_scrollFlags="scroll" at toolbar
         rv = view.findViewById(R.id.main_profile_rv);
         rv.setLayoutManager(new GridLayoutManager(getContext(), 3));
         rv.setAdapter(new MockAdapter());
 
+
+
         return view;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_profile, menu);
+        super.onCreateOptionsMenu(menu, inflater);
     }
 
     private class MockAdapter extends RecyclerView.Adapter<MockViewHolder>{
@@ -44,7 +60,40 @@ public class MainProfileFragment extends Fragment {
                 R.drawable.ic_insta_add,
                 R.drawable.ic_insta_add,
                 R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
+                R.drawable.ic_insta_add,
                 R.drawable.ic_insta_add
+
         };
 
         @NonNull

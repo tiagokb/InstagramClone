@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".register.presentation.RegisterActivity"
-    tools:showIn="@layout/activity_register">
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
@@ -35,14 +33,14 @@
         app:text="@string/next" />
 
     <View
-        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginTop="80dp"
         android:layout_marginBottom="24dp"
         android:background="@color/grayBorder" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/login_text_view_login"
+        android:id="@+id/register_text_view_login"
         style="@style/InstaTextViewBase"
         android:layout_gravity="center"
         android:padding="16dp"

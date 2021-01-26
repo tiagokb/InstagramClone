@@ -28,7 +28,7 @@
     <string name="following">seguindo</string>
     <string name="edit_profile">Editar perfil</string>
     <string name="username">username</string>
-    <string name="invalid_email">Email inválido</string>
+    <string name="invalid_email">Teu email n ta bagual, arruma ai!</string>
     <string name="password_not_equal">Senha e confirmar senha devem ser iguais.</string>
     <string name="save">Salvar</string>
     <string name="title_activity_add">AddActivity</string>
@@ -44,4 +44,8 @@
     <string name="logout_action">Sair</string>
     <string name="cancel">Cancel</string>
     <string name="change_username">Alterar nome de usuário</string>
+    <string name="cancel_registration">Cancelar registro</string>
+    <string name="cancel_registration_message">Deseja voltar para tela de login? todo progresso será perdido.</string>
+    <string name="back">voltar</string>
+    <string name="password_error_too_short">A senha deve ter pelo menos 6 caracteres</string>
 </resources>

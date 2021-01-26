@@ -11,19 +11,17 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top">
+        android:layout_gravity="bottom">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <fragment
+            <FrameLayout
                 android:id="@+id/register_fragment"
-                android:name="com.tiagokontarski.instagramclone.register.presentation.fragments.RegisterPhotoFragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:layout="@layout/fragment_register_photo" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
