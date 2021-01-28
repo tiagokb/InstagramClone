@@ -30,14 +30,14 @@ public class RegisterActivity extends AbstractActivity implements RegisterView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setStatusBarDark();
+
     }
 
     @Override
     protected void onInject() {
         presenter = new RegisterPresenter();
         presenter.setView(this);
-
+        setStatusBarDark();
         showNextView(RegisterSteps.EMAIL);
     }
 
