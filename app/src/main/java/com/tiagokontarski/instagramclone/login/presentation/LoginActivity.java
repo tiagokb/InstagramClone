@@ -5,7 +5,7 @@ import android.widget.EditText;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.tiagokontarski.instagramclone.commons.views.AbstractActivity;
-import com.tiagokontarski.instagramclone.commons.LoadingButton;
+import com.tiagokontarski.instagramclone.commons.views.LoadingButton;
 import com.tiagokontarski.instagramclone.R;
 import com.tiagokontarski.instagramclone.login.datasource.LoginDataSouce;
 import com.tiagokontarski.instagramclone.login.datasource.LoginLocalDataSource;

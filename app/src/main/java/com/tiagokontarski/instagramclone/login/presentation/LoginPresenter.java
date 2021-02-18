@@ -6,7 +6,7 @@ import com.tiagokontarski.instagramclone.commons.presenter.Presenter;
 import com.tiagokontarski.instagramclone.commons.utils.Strings;
 import com.tiagokontarski.instagramclone.login.datasource.LoginDataSouce;
 
-class LoginPresenter implements Presenter {
+class LoginPresenter implements Presenter<UserAuth> {
     private final LoginViews view;
     private final LoginDataSouce dataSouce;
 

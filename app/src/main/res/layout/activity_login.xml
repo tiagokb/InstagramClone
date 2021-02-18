@@ -54,7 +54,7 @@
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.tiagokontarski.instagramclone.commons.LoadingButton
+            <com.tiagokontarski.instagramclone.commons.views.LoadingButton
                 android:id="@+id/login_buttom_enter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

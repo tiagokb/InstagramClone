@@ -10,18 +10,18 @@ public class DataBase {
 
     private static DataBase INSTANCE;
     private static Set<UserAuth> userAuths;
+    private static Set<User> users;
     private UserAuth userAuth;
 
     static {
         userAuths = new HashSet<>();
-        userAuths.add(new UserAuth("user1@gmail.com", "1"));
-        userAuths.add(new UserAuth("user2@gmail.com", "2"));
-        userAuths.add(new UserAuth("user3@gmail.com", "3"));
-        userAuths.add(new UserAuth("user4@gmail.com", "4"));
-        userAuths.add(new UserAuth("user5@gmail.com", "5"));
-        userAuths.add(new UserAuth("user6@gmail.com", "6"));
-        userAuths.add(new UserAuth("user7@gmail.com", "7"));
-        userAuths.add(new UserAuth("user8@gmail.com", "8"));
+        users = new HashSet<>();
+
+        User userTest = new User();
+        userTest.setEmail("tiagokontarski@gmail.com");
+        userTest.setUsername("tiagokontarski");
+        userAuths.add(new UserAuth("tiagokontarski@gmail.com", "123456"));
+        users.add(userTest);
     }
 
     private OnSuccessListener onSuccessListener;
@@ -78,12 +78,16 @@ public class DataBase {
             userAuth.setEmail(email);
             userAuth.setPassword(password);
 
-            if (userAuths.contains(userAuth)) {
+            User user = new User();
+            user.setEmail(email);
+            user.setUsername(username);
+
+            boolean added = users.add(user);
+            if (!added) {
                 this.userAuth = null;
-                onFailureListener.onFailure(new IllegalArgumentException("Usuário já cadastrado"));
+                onFailureListener.onFailure(new IllegalArgumentException("Usuário já cadastrado!"));
             } else {
                 this.userAuth = userAuth;
-                User user = new User(username, userAuth);
                 onSuccessListener.onSuccess(userAuth);
             }
 

@@ -25,8 +25,8 @@
         android:layout_gravity="center"
         android:text="@string/photo_register_subtitle" />
 
-    <com.tiagokontarski.instagramclone.commons.LoadingButton
-        android:id="@+id/register_wellcome_buttom_next"
+    <com.tiagokontarski.instagramclone.commons.views.LoadingButton
+        android:id="@+id/register_photo_buttom_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/register_wellcome_text_view_wellcome"

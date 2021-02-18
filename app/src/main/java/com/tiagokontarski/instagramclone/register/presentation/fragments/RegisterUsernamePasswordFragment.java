@@ -1,22 +1,15 @@
 package com.tiagokontarski.instagramclone.register.presentation.fragments;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.tiagokontarski.instagramclone.R;
-import com.tiagokontarski.instagramclone.commons.LoadingButton;
-import com.tiagokontarski.instagramclone.commons.utils.Drawables;
+import com.tiagokontarski.instagramclone.commons.views.LoadingButton;
 import com.tiagokontarski.instagramclone.commons.views.AbstractFragment;
 import com.tiagokontarski.instagramclone.register.presentation.RegisterView;
+import com.tiagokontarski.instagramclone.register.presentation.datasource.RegisterDataSource;
+import com.tiagokontarski.instagramclone.register.presentation.datasource.RegisterLocalDataSource;
 import com.tiagokontarski.instagramclone.register.presentation.fragments.presentation.RegisterPresenter;
 
 import butterknife.BindView;
@@ -52,7 +45,7 @@ public class RegisterUsernamePasswordFragment extends AbstractFragment<RegisterP
     public static RegisterUsernamePasswordFragment newInstance(RegisterPresenter presenter) {
         RegisterUsernamePasswordFragment fragment = new RegisterUsernamePasswordFragment();
         fragment.setPresenter(presenter);
-        presenter.setNamePasswaordView(fragment);
+        presenter.setNamePasswordView(fragment);
         return fragment;
     }
 
@@ -126,5 +119,10 @@ public class RegisterUsernamePasswordFragment extends AbstractFragment<RegisterP
             tilConfirm.setError(matchingPasswordError);
             etConfirm.setBackground(findDrawable(R.drawable.edit_text_background_error));
         }
+    }
+
+    @Override
+    public void onCreateUserFailure(String message) {
+        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
     }
 }

@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:text="@string/welcome_to_instagram" />
 
-    <com.tiagokontarski.instagramclone.commons.LoadingButton
+    <com.tiagokontarski.instagramclone.commons.views.LoadingButton
         android:id="@+id/register_wellcome_buttom_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

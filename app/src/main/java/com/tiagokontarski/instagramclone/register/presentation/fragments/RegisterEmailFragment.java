@@ -1,6 +1,5 @@
 package com.tiagokontarski.instagramclone.register.presentation.fragments;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,12 +11,10 @@ import androidx.annotation.Nullable;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.tiagokontarski.instagramclone.R;
-import com.tiagokontarski.instagramclone.commons.LoadingButton;
+import com.tiagokontarski.instagramclone.commons.views.LoadingButton;
 import com.tiagokontarski.instagramclone.commons.utils.Drawables;
 import com.tiagokontarski.instagramclone.commons.views.AbstractFragment;
 import com.tiagokontarski.instagramclone.register.presentation.RegisterView;
-import com.tiagokontarski.instagramclone.register.presentation.datasource.EmailDataSource;
-import com.tiagokontarski.instagramclone.register.presentation.datasource.EmailLocalDataSource;
 import com.tiagokontarski.instagramclone.register.presentation.fragments.presentation.RegisterPresenter;
 
 import butterknife.BindView;
